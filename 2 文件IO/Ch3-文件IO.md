@@ -12,7 +12,7 @@ POSIX.1  SUS
 
 关于文件描述符的一些阐述：
 
-<img src="/home/acptek/文档/Server/服务端开发相关/Sever/server/文件表.png" alt="文件表结构"/>
+![文件表](文件表.png)
 
 1 操作系统资源分配和调度的基本单位是进程。
 2 每个进程由一个PCB进程控制块来描述。

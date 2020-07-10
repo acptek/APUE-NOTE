@@ -1,5 +1,25 @@
 # 系统IO （系统调用IO）
 
+```
+open , close , openat
+read , write
+creat
+
+lseek
+
+pread , pwrite
+
+dup , dup2
+
+sync , fsync , fdatasync
+
+fcntl
+
+ioctl
+```
+
+
+
 1 文件描述符 fd：在文件IO中贯穿始终的类型
 2 文件IO操作 ： open, close, read, write, lseek
 	区别文件IO 和 标准IO		
