@@ -1,7 +1,3 @@
-//
-// Created by acptek on 2020/3/17.
-//
-
 #include "rwlock.h"
 #include <stdio.h>
 #include <stdlib.h>
