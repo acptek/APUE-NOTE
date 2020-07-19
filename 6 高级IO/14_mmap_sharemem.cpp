@@ -1,7 +1,3 @@
-//
-// Created by acptek on 2020/3/31.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/mman.h>
