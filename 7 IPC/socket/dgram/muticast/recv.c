@@ -30,12 +30,13 @@ int main()
         exit(1);
     }
 
+	// 创建多播组，根据IP_ADD_MEMBERSHIP选项设置optval参数
     struct ip_mreqn mreqn;
     inet_pton(AF_INET, MGROUP, &mreqn.imr_multiaddr);
     inet_pton(AF_INET, "0.0.0.0", &mreqn.imr_address);
-    mreqn.imr_ifindex = if_nametoindex("enp1s0");
+    mreqn.imr_ifindex = if_nametoindex("enp1s0"); // 当前使用的网络设备的索引号
 
-
+	// 设置选项
     if(setsockopt(sd, IPPROTO_IP, IP_ADD_MEMBERSHIP, &mreqn, sizeof(mreqn)) < 0){
         perror("setsockopt()");
         exit(1);

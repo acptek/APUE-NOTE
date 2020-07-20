@@ -30,6 +30,7 @@ int main()
     }
 
     int val = 1;
+    // 设置广播选项
     if(setsockopt(sd, SOL_SOCKET, SO_BROADCAST, &val, sizeof(val)) < 0){
         perror("setsockopt()");
         exit(1);
