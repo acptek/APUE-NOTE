@@ -81,8 +81,8 @@ int main()
 
     // 同时监听信号
     sa.sa_handler = daemon_exit;
-    sigemptyset(&sa.sa_mask);
-    sigaddset(&sa.sa_mask, SIGQUIT);
+    sigemptyset(&sa.sa_mask); // 将初始随机值置空
+    sigaddset(&sa.sa_mask, SIGQUIT); // 防止可重入
     sigaddset(&sa.sa_mask, SIGTERM);
     sigaddset(&sa.sa_mask, SIGINT);
     sa.sa_flags = 0;
