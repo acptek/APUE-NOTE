@@ -3,7 +3,7 @@
 
 #define JOB_MAX 1024
 
-typedef void at_jobfunc_t(void*)
+typedef void at_jobfunc_t(void*);
 
 int at_addjob(int sec, at_jobfunc_t *jobp, void *arg);
 /*
@@ -12,6 +12,8 @@ int at_addjob(int sec, at_jobfunc_t *jobp, void *arg);
  *        == -ENOSPC fail,数组满
  *        == -ENOMEM fail,内存空间不足
  */
+
+// int at_addjob_repeat(int , at_jobfunc_t *, void *); // 添加一个周期性任务
 
 int at_canceljob(int id);
 /*
@@ -27,8 +29,8 @@ int at_waitjob(int id);
  *        == -EINVAL fail,参数非法
  */
 
-int at_pausejob(int id);
+// int at_pausejob(int id);
 
-int at_resumejob(int id);
+// int at_resumejob(int id);
 
 #endif //MYTBF_ANYTIMER_H
